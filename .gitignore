@@ -61,3 +61,11 @@ dist/
 *.pem
 *.crt
 secrets.yml
+
+
+# ======================
+# Otros (just in case)
+# ======================
+Others/
+
+
