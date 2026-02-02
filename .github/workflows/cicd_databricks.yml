@@ -1,0 +1,34 @@
+name: CI-CD_databricks
+
+on:
+  push:
+    branches: [ "main", "develop", "features/*" ]
+  pull_request:
+    branches: [ "main", "develop", "features/*" ]
+    
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Run pytest
+        run: |
+          pip install -r requirements.txt
+          pytest
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      # - name: Install databricks CLI
+      #   run: pip install databricks-cli
+      # - name: Configure Databricks
+      #   run: |
+      #     databricks configure --token <<< "$DATABRICKS_HOST\n$DATABRICKS_TOKEN"
+      # - name: Run training notebook
+      #   run: |
+      #     databricks runs submit --json-file jobs/run_training.json
