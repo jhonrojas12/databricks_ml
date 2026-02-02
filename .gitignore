@@ -1,3 +1,63 @@
 .pytest_cache
 */__pycache__
 venv
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# ======================
+# Virtual environments
+# ======================
+venv/
+.env/
+.env.*
+
+# ======================
+# Pytest / testing
+# ======================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ======================
+# VSCode
+# ======================
+.vscode/
+.history/
+
+# ======================
+# Jupyter / notebooks
+# ======================
+.ipynb_checkpoints/
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Build / packaging
+# ======================
+build/
+dist/
+
+# ======================
+# Docker
+# ======================
+*.log
+
+# ======================
+# Secrets (just in case)
+# ======================
+*.key
+*.pem
+*.crt
+secrets.yml
