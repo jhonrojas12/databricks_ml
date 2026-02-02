@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Check linting
-        working-directory: src
+        working-directory: utils
         run: ruff check .  
       - name: Run pytest
         run: |
