@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+      - name: Check linting
+        working-directory: src
+        run: ruff check .  
       - name: Run pytest
         run: |
           pip install -r requirements.txt
