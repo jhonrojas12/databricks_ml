@@ -20,7 +20,7 @@ jobs:
   cd:
     needs: ci
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'  || github.ref == 'refs/heads/features/*'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'  || startsWith(github.ref, 'refs/heads/features/')
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

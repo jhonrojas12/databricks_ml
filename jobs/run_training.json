@@ -1,0 +1,11 @@
+{
+    "run_name": "Automated Training Job",
+    "existing_cluster_id": "0123-456789-abcd123", 
+    "notebook_task": {
+      "notebook_path": "/Repos/<tu-usuario>/databricks_ml/notebooks/02_automl_training",
+      "base_parameters": {
+        "data_path": "/FileStore/data/train.csv"
+      }
+    }
+  }
+  
